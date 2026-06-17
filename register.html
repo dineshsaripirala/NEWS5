@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - NewsHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a class="logo" href="index.html"><img src="stackly-logo.webp" alt="NewsHub" style="height:64px;width:auto;vertical-align:middle;"></a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="categories.html">Categories</a>
+                <a href="latest.html">Latest News</a>
+                <a href="magazine.html">Magazine</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="signin.html">Sign In</a>
+                <a href="register.html" class="nav-register current">Register</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="content">
+        <!-- Registration Form -->
+        <form class="signin-form" id="registerForm" novalidate>
+            <h1>Create Account</h1>
+
+            <div class="form-group">
+                <input type="text" id="fullName" placeholder="Full Name" autocomplete="name">
+                <div class="error-message" id="fullNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" autocomplete="email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="mobile" placeholder="Mobile Number (10 digits)" autocomplete="tel">
+                <div class="error-message" id="mobileError"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password (8+ chars, 1 uppercase, 1 number)" autocomplete="new-password">
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" autocomplete="new-password">
+                <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 15px;">Create Account</button>
+            <p style="text-align: center; margin-top: 20px; font-size: 14px;">Already have an account? <a href="signin.html" class="read-more" style="padding: 0;">Sign In</a></p>
+        </form>
+
+        <!-- Success State (shown after successful registration) -->
+        <div class="register-success" id="registerSuccess">
+            <div class="success-icon">✅</div>
+            <h2>Account Created!</h2>
+            <p>Your account has been created successfully.</p>
+            <a href="signin.html" class="btn btn-primary" style="display: inline-block; margin-top: 20px; padding: 12px 32px;">Go To Sign In</a>
+            <p class="countdown-text">Redirecting to Sign In in <span id="countdown">5</span>s...</p>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
